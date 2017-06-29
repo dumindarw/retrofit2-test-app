@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/updateClaim"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="vertical|horizontal">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewClaimVehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/vehicle_number"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_vehicle"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:hint="@string/vehicle_number"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textViewClaimIntim"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/intimation_no"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_intim_no"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:hint="@string/intimation_no"
+                    android:inputType="none"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout03"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimInsType"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/inspection"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/spn_claim_ins_type"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:inputType="none"
+                    android:layout_weight="0.5" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout04"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimPolicy"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/policy_number"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_policy"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:inputType="none"
+                    android:hint="@string/policy_number"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout05"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimLoc"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/location"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_loc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:hint="@string/location"
+                    android:inputType="none"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout06"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimCaller"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/customer"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_caller"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:hint="@string/customer"
+                    android:inputType="none"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout07"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimContNo"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/contact_no"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_contact_no"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:autoLink="phone"
+                    android:hint="@string/contact_no"
+                    android:inputType="none"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout08"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimYom"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/yom"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_yom"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:hint="@string/yom"
+                    android:inputType="none"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimCcRemark"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/call_center_remarks"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_cc_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                     android:inputType="text"
+                    android:hint="@string/call_center_remarks"
+                    android:maxLength="200"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimInspDate"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/inspected_date"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_insp_date"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.4"
+                    android:hint="@string/inspected_date"
+                    android:imeOptions="actionNext"
+                    android:inputType="datetime"
+                   android:maxLines="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_claim_insp_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.1"
+                    android:layout_height="33dp"
+                    app:srcCompat="@drawable/ic_calender" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimInspTime"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/inspected_time"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_insp_time"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.4"
+                    android:hint="@string/inspected_time"
+                    android:imeOptions="actionNext"
+                    android:inputType="datetime"
+                   android:maxLines="1" />
+
+                <ImageButton
+                    android:id="@+id/btn_claim_insp_time"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="0.1"
+                    app:srcCompat="@drawable/ic_calender" />
+
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                android:id="@+id/LinearLayout13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textViewClaimMileage"
+                    android:layout_width="60dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.37"
+                    android:text="@string/milage_str"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_mileage"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.72"
+                    android:hint="@string/milage_str"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                   android:maxLines="1" />
+
+            </LinearLayout> -->
+
+            <!-- Asscesor Remarks-->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimAssRemarks"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/assessor_remarks"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_claim_ass_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5"
+                    android:maxLength="200"
+                    android:hint="@string/assessor_remarks"
+                    android:imeOptions="actionNext"
+                   android:maxLines="1" />
+
+            </LinearLayout>
+
+            <!-- Garage Inspection Views -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutCommon1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Sum Insured-->
+                <LinearLayout
+                    android:id="@+id/LinearLayout14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewClaimSumInsured"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/sum_insured"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_claim_sum_insured"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.5"
+                         android:inputType="text"
+                        android:hint="@string/sum_insured"
+                        android:imeOptions="actionNext"
+                       android:maxLines="1" />
+                </LinearLayout>
+
+                <!-- Pre Accident Value-->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewPreAccidentVal"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/pre_accident_value"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_pre_acc_val"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/pre_accident_value"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       android:maxLines="1" />
+                </LinearLayout>
+
+                <!-- ACR -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout16"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewClaimAcr"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/acr"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_claim_acr"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.5"
+                        android:hint="@string/acr"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       android:maxLines="1" />
+
+                </LinearLayout>
+
+                <!-- Excess -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout17"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewClaimExcess"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/excess"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_claim_excess"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.5"
+                        android:hint="@string/excess"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+                <!-- Bald Tire Penalty -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout18"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textBaldTirePenalty"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/bald_tire_penalty"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_bald_tire_penalty_val"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/bald_tire_penalty"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       android:maxLines="1" />
+                </LinearLayout>
+
+                <!-- Under Insurance Penalty -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout19"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textUnderInsurancePenaltyVal"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/under_insurance_penalty"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_under_ins_penalty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/under_insurance_penalty"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       android:maxLines="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutPayableAmount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Payable Amount  -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout42"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textPayableAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/payable_amount"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_payable_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/payable_amount"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                       android:maxLines="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutACR"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Repair Completed  -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout37"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewRepairCompleted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/repair_completed"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_repair_completed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_repair_completed_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/yes"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_repair_completed_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Salvage Received  -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout38"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewSalvageReceived"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/salvage_received"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_salvage_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_salvage_received_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/yes"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_salvage_received_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Assessor Remarks  -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewClaimAssRemark"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.33"
+                    android:textStyle="bold"
+                    android:text="@string/assessor_remarks"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutCommon3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Settlement Method   -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout39"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewSettlmentMethod"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/settlment_method"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_settlment_method"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/radio_settlment_onsite_offer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/onsite_offer"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_settlment_call_estimate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/call_estimate"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- On Site Offer Amount   -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout41"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewOnsiteOfferAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/onsite_offer_amount"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_onsite_offer_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/onsite_offer_amount"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="500"
+                        android:maxLines="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutCommon2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Police Report Requested   -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout22"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewPoliceReport"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/police_report_request"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_police_report"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_police_report_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/yes"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_police_report_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!-- Special Remarks  -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout23"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewSpecialRemarks"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/special_remarks"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/txt_special_remarks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/special_remarks"
+                        android:imeOptions="actionNext"
+                        android:maxLength="500"
+                        android:maxLines="1" />
+                </LinearLayout>
+
+                <!-- Investigate Claim -->
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout24"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewInvestigateClaim"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/investigate_claim"
+                        android:textSize="15sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_investigate_claim"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_investigate_claim_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="@string/yes"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_investigate_claim_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Inspection Remarks  -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewInspectionRemark"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/inspection_remarks"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_inspection_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/inspection_remarks"
+                    android:imeOptions="actionNext"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Assessor Payment -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout25"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewAssessorPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:textStyle="bold"
+                    android:text="@string/assessor_payment"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Professional Fee -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout26"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewProfessionalFee"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/professional_fee"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_proffesional_fee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/professional_fee"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Mileage -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout27"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewMileage"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/mileage"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout34"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top">
+
+                    <EditText
+                        android:id="@+id/txt_milage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/mileage"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="500"
+                        android:nextFocusRight="@+id/txt_rate"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout28"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTelephone"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/telephone"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_telephone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/telephone"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Photo Charges -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout29"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textPhotoCount"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/photo_count"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top">
+
+                    <EditText
+                        android:id="@+id/txt_photoCount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:hint="@string/photo_count"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="500"
+                        android:maxLines="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout35"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textPhotoCharges"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/photo_charges"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top">
+
+                    <EditText
+                        android:id="@+id/txt_photoCharges"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="top"
+                        android:hint="@string/photo_charges"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="500"
+                        android:maxLines="1" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewOtherCharges"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/other_charges"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_other_charges"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/other_charges"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Total Charges -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout31"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewTotalCharges"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/total_charges"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_total_charges"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/total_charges"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Reason -->
+
+            <LinearLayout
+                android:id="@+id/LinearLayout32"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewReason"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="0.5"
+                    android:text="@string/reason"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/txt_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="top"
+                    android:hint="@string/reason"
+                    android:imeOptions="actionNext"
+                    android:maxLength="500"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!--<Button
+                android:id="@+id/todo_edit_button"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/save" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

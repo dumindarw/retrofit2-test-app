@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.loits.insurance.cm">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme">
+        <service android:name=".sync.AuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <service
+            android:name=".sync.SyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <provider
+            android:name=".provider.StubProvider"
+            android:authorities="com.loits.insurance.cm.provider.ca" />
+
+
+        <activity android:name=".SplashActivity"  android:label="@string/app_name" android:noHistory="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" android:label="Login"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ApprovalActivity" android:parentActivityName=".MainActivity" android:label="Approve/Reject Claim" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".UpdateClaimActivity" android:parentActivityName=".MainActivity" android:label="Edit Claim"/>
+        <activity android:name=".ViewClaimActivity" android:parentActivityName=".MainActivity" android:label="View Claim" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".GalleryActivity"  android:parentActivityName=".UpdateClaimActivity" android:label="Gallery"/>
+        <activity android:name=".GalleryViewActivity"  android:parentActivityName=".UpdateClaimActivity" android:label="View Gallery"/>
+        <activity android:name=".CameraCaptureActivity" android:label="Capture"/>
+    </application>
+
+</manifest>
